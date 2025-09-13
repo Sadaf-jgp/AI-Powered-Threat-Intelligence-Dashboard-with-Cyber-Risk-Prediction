@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Threat Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Threat Intelligence Aggregator Dashboard</h1>
+    <div>
+        <script type="text/javascript">
+            var graphs = [{"data":[{"type":"bar","x":["Finance","General","Healthcare","IoT"],"y":[1,4,1,1],"marker":{"color":["#636EFA","#EF553B","#00CC96","#AB63FA"]}}],"layout":{"title":{"text":"Threats by Sector"},"xaxis":{"title":{"text":"Sector"}},"yaxis":{"title":{"text":"Count"}}}}];
+            var layout = {"height":600,"title":{"text":"Threat Intelligence Aggregator"},"annotations":[{"text":"Threats by Sector","x":0.5,"y":1,"xref":"paper","yref":"paper","showarrow":false},{"text":"7-Day Forecast","x":0.5,"y":0,"xref":"paper","yref":"paper","showarrow":false}]};
+            var config = {"responsive":true};
+            Plotly.newPlot('myDiv', graphs[0].data, graphs[0].layout, config);
+        </script>
+        <div id="myDiv" style="width:100%;"></div>
+    </div>
+    <h2>Recent Threats</h2>
+    <table border="1" class="dataframe">
+        <thead>
+            <tr style="text-align: right;">
+                <th>title</th>
+                <th>summary_nlp</th>
+                <th>entities</th>
+                <th>sector</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AI Phishing Surge #CyberSec</td>
+                <td>LockBit uses deepfake voices to target banks in USA.</td>
+                <td>LockBit, USA</td>
+                <td>Finance</td>
+            </tr>
+            <tr>
+                <td>IoT Zero-Day Alert</td>
+                <td>APT28 exploits smart cameras in Europe.</td>
+                <td>APT28, Europe</td>
+                <td>IoT</td>
+            </tr>
+            <tr>
+                <td>Ransomware Hits Healthcare</td>
+                <td>25% attack spike reported.</td>
+                <td></td>
+                <td>Healthcare</td>
+            </tr>
+            <tr>
+                <td>Unknown</td>
+                <td>...</td>
+                <td></td>
+                <td>General</td>
+            </tr>
+            <tr>
+                <td>Unknown</td>
+                <td>...</td>
+                <td></td>
+                <td>General</td>
+            </tr>
+            <tr>
+                <td>Unknown</td>
+                <td>...</td>
+                <td></td>
+                <td>General</td>
+            </tr>
+            <tr>
+                <td>Unknown</td>
+                <td>...</td>
+                <td></td>
+                <td>General</td>
+            </tr>
+            <tr>
+                <td>Unknown</td>
+                <td>...</td>
+                <td></td>
+                <td>General</td>
+            </tr>
+            <tr>
+                <td>Unknown</td>
+                <td>...</td>
+                <td></td>
+                <td>General</td>
+            </tr>
+            <tr>
+                <td>Unknown</td>
+                <td>...</td>
+                <td></td>
+                <td>General</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Total Threats: 15 | Top Sector: General</p>
+    <div>
+        <script type="text/javascript">
+            var graphs = [{"data":[{"type":"scatter","mode":"lines","x":["2025-09-14","2025-09-15","2025-09-16","2025-09-17","2025-09-18","2025-09-19","2025-09-20"],"y":[18.0,17.9,17.8,17.7,17.6,17.5,17.4],"line":{"color":"#EF553B"},"name":"High"}],"layout":{"title":{"text":"7-Day Threat Forecast"},"xaxis":{"title":{"text":"Date"}},"yaxis":{"title":{"text":"Predicted Threats"}}}}];
+            var layout = {"height":600,"title":{"text":"Threat Intelligence Aggregator"},"annotations":[{"text":"Threats by Sector","x":0.5,"y":1,"xref":"paper","yref":"paper","showarrow":false},{"text":"7-Day Forecast","x":0.5,"y":0,"xref":"paper","yref":"paper","showarrow":false}]};
+            var config = {"responsive":true};
+            Plotly.newPlot('myDiv', graphs[1].data, graphs[1].layout, config);
+        </script>
+        <div id="myDiv" style="width:100%;"></div>
+    </div>
+</body>
+</html>
